@@ -184,4 +184,8 @@
     height: 2.2em;
     width: 10em;
   }
+
+  .cssbuttons-io-button .icon {
+    height: 1.8em;
+  }
 }
