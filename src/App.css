@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-principal);
+  background-color: var(--cor-principal);
+}
+
+:root {
+  --cor-principal: #09090b;
+  --cor-texto: #f9fafb;
+  --cor-secundaria: #18181b;
+  --font-principal: "Inter", sans-serif;
+  --cor-botao: #8b5cf6;
+}
+
+/* nav bar */
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  color: var(--cor-texto);
+  width: 100%;
+  margin: 0 auto;
+  gap: 20%;
+}
+
+.nav-bar-left {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 3.5rem;
+  gap: 2rem;
+}
+
+.pesquisar {
+  margin-left: -105%;
+  background-color: var(--cor-secundaria);
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+.barra-pesquisa {
+  border-radius: 15px;
+  width: 38%;
+  height: 5%;
+  padding: 13px;
+  padding-left: 11%;
+  background: var(--cor-secundaria);
+  text-align: start;
+  box-shadow: var(--cor-botao) 1px 1px;
+  color: var(--cor-texto);
+}
+
+.busca-produtos {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar-rigth {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  gap: 2rem;
+}
+
+.carrinho {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  gap: 10px;
+}
+
+.perfil {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    gap: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .barra-pesquisa {
+    display: flex;
+    width: 200%;
+    text-align: center;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 90%;
+    margin-left: 10px;
+  }
+
+  .pesquisar {
+    position: relative;
+    margin-bottom: 90%;
+  }
+
+  .busca-produtos {
+    margin-bottom: 90%;
+  }
+
+  .nav-bar-left {
+    display: flex;
+    justify-content: center;
+    padding-right: 30%;
+    margin-left: 5px;
+    margin-bottom: -15px;
+  }
+  .nav-bar-rigth {
+    display: flex;
+    padding-bottom: 30%;
+  }
+}
+
+/* nav bar */
+
+/* Conteudo */
+
+.secao-produtos {
+  margin-top: 20px;
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+}
+
+.conteudo-home {
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-destaque {
+  background: var(--cor-secundaria);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.produtos-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.img-lateral-superior,
+.img-lateral-inferior {
+  background-color: var(--cor-secundaria);
+  height: 100%;
+  width: 100%;
+}
+
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io-button {
+  background: var(--cor-botao);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 20rem;
+  margin-top: 40rem;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.seta {
+  background-color: var(--cor-texto);
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+.cssbuttons-io-button-lateral {
+  background: var(--cor-botao);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  height: 2.6em;
+  padding-right: 3em;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.3s ease;
+  margin-left: 7rem;
+  margin-top: 19rem;
+}
+
+.cssbuttons-io-button-lateral .icon {
+  background: white;
+  position: absolute;
+  right: 0.35em;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.1em;
+  width: 2.1em;
+  border-radius: 0.7em;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.cssbuttons-io-button-lateral:hover .icon {
+  width: calc(100% - 0.7em);
+}
+
+.cssbuttons-io-button-lateral .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button-lateral:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button-lateral:active .icon {
+  transform: scale(0.95) translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .conteudo-home {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -25%;
+  }
+}
+
+/* Cards */
+
+.cta-background {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.saiba-mais {
+  background: var(--cor-texto);
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--cor-botao);
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.saiba-maisl:hover {
+  background-color: var(--cor-texto);
+}
+
+.saiba-mais:active {
+  box-shadow: var(--cor-botao) 2px 2px 0 0;
+  transform: translate(1px, 1px);
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar para a linha de baixo */
+  justify-content: center; /* centraliza os cards na tela */
+  gap: 30px;
+  padding: 20px;
+}
+
+.container {
+  flex: 1 1 calc(33.33% - 60px); /* 3 por linha */
+  box-sizing: border-box;
+  max-width: 350px;
+}
+
+.cta {
+  background: var(--cor-principal);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  border: solid 1px white;
+
+  &:hover {
+    img-card {
+      top: -10%;
+      filter: brightness(70%);
+    }
+
+    .text-card {
+      bottom: 0;
+    }
+  }
+
+  .img-card {
+    bottom: 0;
+    filter: brightness(100%);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 110%;
+  }
+
+  .text-card {
+    bottom: -38%;
+    padding: 15px;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+
+    .titulo-card {
+      color: var(--cor-texto);
+      display: inline-block;
+      font-weight: 300;
+      margin-bottom: 5px;
+      position: relative;
+    }
+
+    .paragrafo-card {
+      color: var(--cor-texto);
+      font-weight: 300;
+    }
+
+    .paragrafo-preco {
+      font-size: 1.4rem;
+      color: var(--cor-texto);
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .paragrafo-quantidade {
+      font-size: 0.9rem;
+      color: var(--cor-texto);
+      font-style: italic;
+      padding-left: 0;
+      margin-top: 5px;
+    }
+
+    .text-card {
+      text-align: left;
+    }
+  }
+}
+
+/* @media (max-whidt: 760px) {
+  .cards {
+  }
+} */
+/* cards */
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: var(--cor-secundaria);
+  color: var(--cor-texto);
+  font-family: var(--font-principal);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
+}
+
+.titulo-modal,
+.button-modal,
+.paragrafo-modal {
+  background-color: var(--cor-secundaria);
+  padding: 5px;
+}
+
+.button-modal {
+  border: 2px solid var(--cor-botao);
+  box-shadow: var(--cor-texto) 4px 4px 0 0;
+  background-color: var(--cor-texto);
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-family: var(--font-principal);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--cor-botao);
+}
+
+.button-modal:hover {
+  background-color: var(--cor-texto);
+}
+
+.button-modal:active {
+  box-shadow: var(--cor-botao) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.imagem-modal {
+  display: block;
+  margin: 0 auto 15px auto;
+  max-width: 400px;
+  border: 2px solid var(--cor-texto);
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .modal-card {
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+}
