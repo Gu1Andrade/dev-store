@@ -1,4 +1,5 @@
 import React from "react";
+import "../componentes/styles/modal.css";
 
 function Modal({
   isOpen,
