@@ -1,16 +1,47 @@
-# React + Vite
+# 💻 DevStore | E-commerce Temático para Desenvolvedores
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 💡 Sobre o Projeto
 
-Currently, two official plugins are available:
+Este é um projeto de **Front-End construído em React** que simula um e-commerce moderno, com foco na exibição interativa de produtos e navegação fluida. O catálogo é voltado para roupas e acessórios com temática de programação.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O desenvolvimento destaca a gestão de estado (`useState`), roteamento e a manipulação eficiente de listas de componentes.
 
-## React Compiler
+## 🛠️ Tecnologias e Ferramentas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Categoria       | Tecnologia           | Arquivos de Referência |
+| :-------------- | :------------------- | :--------------------- |
+| **Framework**   | **React** (JSX)      | `src/App.jsx`          |
+| **Build Tool**  | **Vite**             | `vite.config.js`       |
+| **Roteamento**  | **React Router DOM** | Rotas em `src/App.jsx` |
+| **Linter**      | **ESLint**           | `eslint.config.js`     |
+| **Estilização** | **CSS Global**       | `src/App.css`          |
 
-## Expanding the ESLint configuration
+## 📂 Estrutura de Componentes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O projeto segue uma estrutura modular com foco na separação de responsabilidades:
+
+| Componente     | Localização                    | Função Principal                                                                            |
+| :------------- | :----------------------------- | :------------------------------------------------------------------------------------------ |
+| **`App`**      | `src/App.jsx`                  | Ponto central: Define as **Rotas** e gerencia o **Estado de Busca**.                        |
+| **`Navbar`**   | `src/componentes/Navbar.jsx`   | Barra superior. Contém o input de busca (lógica embutida) e navegação para `/produto`.      |
+| **`Conteudo`** | `src/componentes/Conteudo.jsx` | Página inicial. Exibe destaques e botões de ação.                                           |
+| **`Cards`**    | `src/componentes/Cards.jsx`    | Container que recebe o termo de `busca` via props e renderiza a lista de produtos filtrada. |
+| **`Card`**     | `src/componentes/Card.jsx`     | Cartão individual de produto. Exibe detalhes e possui funcionalidade de abrir o modal.      |
+| **`Modal`**    | `src/componentes/Modal.jsx`    | Componente genérico responsável por exibir detalhes do produto em uma sobreposição.         |
+| **`Carrinho`** | `src/componentes/Carrinho.jsx` | Componente de rota placeholder para a página do carrinho.                                   |
+
+---
+
+### 📦 Dados e Assets
+
+- **Dados:** `src/assets/scripts/dados.js` (Contém os arrays `moletons` e `camisas`).
+- **Ponto de Entrada:** `src/main.jsx` (Inicializa a aplicação).
+
+## ⚙️ Instalação e Execução (Local)
+
+Para colocar o projeto em funcionamento em sua máquina, siga os comandos abaixo no terminal, a partir do diretório raiz do projeto:
+
+| Comando       | Descrição                                                                                     |
+| :------------ | :-------------------------------------------------------------------------------------------- |
+| `npm install` | Instala todas as dependências do projeto listadas no `package.json`.                          |
+| `npm run dev` | Inicia o servidor de desenvolvimento local (via Vite), geralmente em `http://localhost:5173`. |
