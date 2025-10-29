@@ -1,0 +1,122 @@
+.cta-background {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.saiba-mais {
+  background: var(--cor-texto);
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--cor-botao);
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.saiba-maisl:hover {
+  background-color: var(--cor-texto);
+}
+
+.saiba-mais:active {
+  box-shadow: var(--cor-botao) 2px 2px 0 0;
+  transform: translate(1px, 1px);
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar para a linha de baixo */
+  justify-content: center; /* centraliza os cards na tela */
+  gap: 30px;
+  padding: 20px;
+}
+
+.container {
+  flex: 1 1 calc(33.33% - 60px); /* 3 por linha */
+  box-sizing: border-box;
+  max-width: 350px;
+}
+
+.cta {
+  background: var(--cor-principal);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  border: solid 1px white;
+
+  &:hover {
+    img-card {
+      top: -10%;
+      filter: brightness(70%);
+    }
+
+    .text-card {
+      bottom: 0;
+    }
+  }
+
+  .img-card {
+    bottom: 0;
+    filter: brightness(100%);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 110%;
+  }
+
+  .text-card {
+    bottom: -38%;
+    padding: 15px;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+
+    .titulo-card {
+      color: var(--cor-texto);
+      display: inline-block;
+      font-weight: 300;
+      margin-bottom: 5px;
+      position: relative;
+    }
+
+    .paragrafo-card {
+      color: var(--cor-texto);
+      font-weight: 300;
+    }
+
+    .paragrafo-preco {
+      font-size: 1.4rem;
+      color: var(--cor-texto);
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .paragrafo-quantidade {
+      font-size: 0.9rem;
+      color: var(--cor-texto);
+      font-style: italic;
+      padding-left: 0;
+      margin-top: 5px;
+    }
+
+    .text-card {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 431px) {
+  .cards {
+    gap: 3rem;
+    margin-left: 2.5rem;
+  }
+}

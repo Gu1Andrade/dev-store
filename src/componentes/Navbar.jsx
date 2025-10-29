@@ -3,6 +3,7 @@ import logo from "../assets/icones/devstore.png";
 import search from "../assets/icones/search.png";
 import imagemPerfil from "../assets/icones/foto-perfil.png";
 import carrinho from "../assets/icones/carrinho.png";
+import "./styles/navbar.css";
 
 export function Navbar({ busca, setBusca }) {
   const navigate = useNavigate();

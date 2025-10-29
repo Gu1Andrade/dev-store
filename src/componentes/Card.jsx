@@ -1,6 +1,7 @@
 import { useState } from "react";
 import saibaMais from "../assets/icones/mais-info.png";
 import Modal from "./Modal";
+import "./styles/cards.css";
 
 export function Card({ nome, imagem, descricao, preco, quantidade }) {
   const [open, setOpen] = useState(false);

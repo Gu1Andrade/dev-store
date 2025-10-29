@@ -4,6 +4,7 @@ import cleanCode from "../assets/roupas/Clean_Code.png";
 import codeClassic from "../assets/roupas/Code_Classic.png";
 import Modal from "./Modal";
 import { Cards } from "./Cards";
+import "./styles/conteudo.css";
 
 export function Conteudo() {
   const [open, setOpen] = useState(false);
